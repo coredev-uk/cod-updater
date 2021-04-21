@@ -1,3 +1,3 @@
 # cod-updater
 
-For the COD Updater you need [tesseract ocr open source OCR engine download](https://github.com/tesseract-ocr/tesseract) a executable for this can be found [here](http://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-setup-4.00.00dev.exe).
+For the COD Updater you need [Tesseract Open Source OCR Engine](https://github.com/tesseract-ocr/tesseract). You can find a install binary [here](https://tesseract-ocr.github.io/tessdoc/Home.html#binaries).

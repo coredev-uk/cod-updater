@@ -50,7 +50,7 @@ while(True):
         time.sleep(1)
         log(f'DEBUG: Current Text: {imageStr}')
         if "PLAY" not in imageStr:
-                # click(115, 1270)
+                click(115, 1270)
                 log('INFO: Click Attempted.')
         elif "UPDATING" in imageStr:
                 log('============================== SUCCESS ==============================\INFO: Update Initialised.')

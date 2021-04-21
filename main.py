@@ -55,4 +55,4 @@ while(True):
         elif "UPDATING" in imageStr:
                 log('============================== SUCCESS ==============================\INFO: Update Initialised.')
                 break
-        time.sleep(5)
+        time.sleep(60)

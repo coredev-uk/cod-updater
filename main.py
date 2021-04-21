@@ -1,10 +1,5 @@
 import numpy as nm
-import pytesseract
-import time
-import ctypes
-import datetime
-import logging
-import os
+import time, datetime, logging, ctypes, pytesseract, os
 from PIL import ImageGrab, ImageOps, Image
 SETTINGS = {
         "tesseract_path": r'C:\\Program Files\\Tesseract-OCR\\tesseract.exe',
@@ -12,6 +7,8 @@ SETTINGS = {
         "box_coords_y1": 1263,
         "box_coords_x2": 273,
         "box_coords_y2": 1318,
+        "click_coords_x": 174,
+        "click_coords_y": 1291
 }
 # Box co-ordinated per resolutions running fullscreen - For having the beta client at full screen.
 # (x1, y1, x2, y2)
@@ -50,9 +47,11 @@ while(True):
         time.sleep(1)
         log(f'DEBUG: Current Text: {imageStr}')
         if "PLAY" not in imageStr:
-                click(115, 1270)
-                log('INFO: Click Attempted.')
+            click(SETTINGS["click_coords_x"], SETTINGS["click_coords_y"])
+            log('INFO: Click Attempted.')
+            time.sleep(30)
         elif "UPDATING" in imageStr:
-                log('============================== SUCCESS ==============================\INFO: Update Initialised.')
-                break
-        time.sleep(60)
+            log('============================== SUCCESS ==============================\INFO: Update Initialised.')
+            break
+        else:
+            time.sleep(60)
